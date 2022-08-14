@@ -1,0 +1,37 @@
+#load{
+    opacity: 1;
+    visibility: visible;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--darkest-clr);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all .4s ease;
+}
+
+.point{
+    width: 20px;
+    height: 20px;
+    background-color: var(--primary-clr);
+    border-radius: 50%;
+    animation: load 1s ease infinite alternate;
+}
+
+@keyframes load {
+    0%{
+        border-radius: 0;
+        transform: rotate(-180deg);
+    }
+    100%{
+        border-radius: 50%;
+        transform: rotate(0deg);
+    }
+}
+
+

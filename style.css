@@ -1,0 +1,138 @@
+:root{
+    --darkest-clr: #1F2126;
+    --primary-clr: #F23054;
+    --clr-1: #F23030;
+    --clr-2: #F23041 ;
+    --clr-3: #400C10;
+}
+
+body{
+    background-color: var(--darkest-clr);
+    font-family: 'Montserrat', sans-serif;
+}
+
+#main{
+    background-color: var(--darkest-clr);
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main__cont{
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.title{
+    width: 90%;
+    color: var(--primary-clr);
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: 900;
+    text-align: center;
+}
+
+.level{
+    margin: 0;
+    font-size: 20px;
+    font-weight: 900;
+    color: var(--primary-clr);
+}
+
+.img__cont{
+    width: 800px;
+    background-color: var(--darkest-clr);
+    border-radius: 25px;
+    
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.img{
+    width: 300px;
+    height: 200px;
+    border-radius: 25px;
+    flex: 25%;
+    margin: 5px;
+    border: 5px solid var(--primary-clr);
+    overflow: hidden;
+}
+
+.img img{
+    width: 100%;
+    height: 100px;
+}
+
+.input__cont{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.input__cont .btn-submit{
+    padding: 5px 50px;
+    margin: 10px;
+    text-transform: uppercase;
+    border: 5px solid var(--darkest-clr);
+    background-color: var(--primary-clr);
+    color: var(--darkest-clr);
+    font-weight: 900;
+
+
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all .2s ease;
+}
+
+.input__cont .btn-submit:hover{
+    background-color: var(--darkest-clr);
+    color: var(--primary-clr);
+}
+
+
+input{
+    background-color: var(--darkest-clr);
+    color: var(--primary-clr);
+    border-radius: 26px;
+    padding: 5px 20px;
+    font-weight: bolder;
+    border: 3px solid var(--darkest-clr);
+    border-bottom: 3px solid var(--primary-clr);
+    text-align: center;
+
+    transition: all .2s ease;
+}
+
+input[type]:focus{
+    border-color: var(--primary-clr);
+    box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075)inset, 0 0 8px var(--clr-2);
+    outline: 0 none;
+}
+
+#input-text::placeholder{
+    color: #8f4e5a;
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    .img__cont{
+        width: 100%;
+    }
+    .img{
+        width: 130px;
+        height: 95px;
+    }
+}

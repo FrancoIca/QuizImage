@@ -1,0 +1,68 @@
+#error-msg{
+    text-align: center;
+    height: 70px;
+    width: 500px;
+    padding: 5px;
+    position: absolute;
+    background-color: var(--primary-clr);
+    top: 0;
+    border-radius: 0px 0 25px 25px;
+    transform: translateY(-1000px);
+    transition: all .3s ease;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 999;
+}
+
+#win-msg{
+    text-align: center;
+    height: 70px;
+    width: 500px;
+    padding: 5px;
+    position: absolute;
+    background-color: rgb(55, 214, 121);
+    top: 0;
+    border-radius: 0px 0 25px 25px;
+    transform: translateY(-1000px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s ease;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 999;
+}
+
+#error-msg p{
+    color: var(--darkest-clr);
+    font-size: 20px;
+    font-weight: 900;
+}
+
+#win-msg p{
+    color: var(--darkest-clr);
+    font-size: 20px;
+    font-weight: 900;
+}
+
+#win-msg.show{
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#error-msg.show{
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 600px){
+    #error-msg{
+        width: 300px;
+    }
+    #win-msg{
+        width: 300px;
+    }
+}
+
